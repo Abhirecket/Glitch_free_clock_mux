@@ -44,12 +44,12 @@ module glitch_free_clock_mux(
  
  // and login input side
  
- assign i_and1 = (!sel) && (!r_clk2_ff2);
- assign i_and2 = (sel)  && (!r_clk1_ff2);
+ assign i_and1 = (!sel) & (!r_clk2_ff2);
+ assign i_and2 = (sel)  & (!r_clk1_ff2);
  
  // and logic output side
- assign o_and1 = clk1 && r_clk1_ff2 ;
- assign o_and2 = clk2 && r_clk2_ff2 ;
+ assign o_and1 = clk1 & r_clk1_ff2 ;
+ assign o_and2 = clk2 & r_clk2_ff2 ;
  
  
  // output logic
